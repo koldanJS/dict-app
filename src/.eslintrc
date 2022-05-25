@@ -1,0 +1,23 @@
+{
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+        "prefer-const": "warn",
+        "no-console": "warn",
+        "quotes": ["warn", "single"],
+        "jsx-quotes": ["warn", "prefer-double"],
+        "indent": ["warn", 2],
+        "max-len": ["warn", {"code": 100}],
+        "comma-dangle": ["warn", "never"],
+        "semi": ["warn", "never"],
+        "import/order": ["warn", {
+          "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"]
+        }],
+        "import/no-anonymous-default-export": ["warn", {
+          "allowObject": true
+        }],
+        "react-hooks/exhaustive-deps": "off"
+    }
+}
