@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
 import { useActions } from '../hooks/useActions'
+import Alert from './Alert'
 
 const Search: React.FC = () => {
 
   const [word, setWord] = useState('')
+  const [isAlert, setIsAlert] = useState(false)
 
   const { fetchWord } = useActions()
 
   const getWord = () => {
     if (!word) {
-      return alert('Looks like you didn\'t enter anything...')
+      setTimeout(() => {
+        setIsAlert(false)
+      }, 2000)
+      return setIsAlert(true)
     }
     fetchWord(word)
   }
@@ -32,6 +37,11 @@ const Search: React.FC = () => {
         onChange={changeHandler}
       />
       <button onClick={getWord} >getHello</button>
+      {
+        isAlert
+          ? <Alert />
+          : null
+      }
     </>
   )
 }

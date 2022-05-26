@@ -53,4 +53,5 @@ const ResponsiveAppBar: React.FC = () => {
     </AppBar>
   )
 }
+
 export default ResponsiveAppBar
