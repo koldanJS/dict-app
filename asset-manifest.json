@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/dict-app/static/css/main.faea17c1.css",
+    "main.js": "/dict-app/static/js/main.fea77f0e.js",
+    "static/media/logo.svg": "/dict-app/static/media/logo.b49a34aec75ffa2e5292f6115894ba56.svg",
+    "index.html": "/dict-app/index.html",
+    "main.faea17c1.css.map": "/dict-app/static/css/main.faea17c1.css.map",
+    "main.fea77f0e.js.map": "/dict-app/static/js/main.fea77f0e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.faea17c1.css",
+    "static/js/main.fea77f0e.js"
+  ]
+}
