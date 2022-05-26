@@ -1,18 +1,18 @@
 import React from 'react'
-import { useActions } from '../hooks/useActions'
+import Search from '../components/Search'
 import { useTypedSelector } from '../hooks/useTypedSelector'
 
 const HomePage: React.FC = () => {
 
-  const { fetchWord } = useActions()
   const word = useTypedSelector(state => state.word)
 
   return <div>
     HomePage
+    <Search getWord={(word) => {}} />
     {
       word.word[0]
         ? <pre>{JSON.stringify(word.word, null, 2)}</pre>
-        : <button onClick={() => fetchWord('I')} >getHello</button>
+        : null
     }
   </div>
 }
