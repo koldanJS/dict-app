@@ -1,4 +1,6 @@
+import { Container } from '@mui/material'
 import React, { useState } from 'react'
+import TextField from '@mui/material/TextField'
 import { useActions } from '../hooks/useActions'
 import Alert from './Alert'
 
@@ -28,21 +30,23 @@ const Search: React.FC = () => {
   }
 
   return (
-    <>
-      <input
+    <Container>
+      <TextField
+        fullWidth
         type="text"
+        label="Enter a word and press 'Enter' to see more..."
+        variant="filled"
         value={word}
         placeholder="Enter a word..."
         onKeyDown={keyDownHandler}
         onChange={changeHandler}
       />
-      <button onClick={getWord} >getHello</button>
       {
         isAlert
           ? <Alert />
           : null
       }
-    </>
+    </Container>
   )
 }
 

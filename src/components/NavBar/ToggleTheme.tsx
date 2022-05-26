@@ -19,7 +19,7 @@ const ToggleTheme: React.FC = () => {
   }
 
   return (
-    <Box sx={{ flexGrow: 0 }}>
+    <Box sx={{ flexGrow: 0, width: '130px' }}>
       <FormGroup>
         <FormControlLabel
           labelPlacement="start"

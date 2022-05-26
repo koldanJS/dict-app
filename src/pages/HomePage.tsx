@@ -1,13 +1,14 @@
 import React from 'react'
-import Search from '../components/Search'
 import { useTypedSelector } from '../hooks/useTypedSelector'
+import Search from '../components/Search'
+import Logo from '../components/Logo'
 
 const HomePage: React.FC = () => {
 
   const word = useTypedSelector(state => state.word)
 
   return <div>
-    HomePage
+    <Logo />
     <Search />
     {
       word.word[0]
