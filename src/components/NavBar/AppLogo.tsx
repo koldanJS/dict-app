@@ -25,7 +25,7 @@ const AppLogo: React.FC = () => {
         noWrap
         component="a"
         sx={{
-          mr: 2,
+          mr: 0,
           display: (windowWidth > 900)
             ? { xs: 'none', md: 'flex' }
             : { xs: 'flex', md: 'none' },

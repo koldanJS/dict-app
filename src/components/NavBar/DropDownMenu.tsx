@@ -22,7 +22,7 @@ const DropDownMenu: React.FC<IDropDownMenuProps> = (props) => {
   const { anchorElNav, openNavMenuHandler, closeNavMenuHandler, clickHandler, links } = props
 
   return (
-    <Box sx={{ flexGrow: 1, width: '150px', display: { xs: 'flex', md: 'none' } }}>
+    <Box sx={{ flexGrow: 1, width: '100px', display: { xs: 'flex', md: 'none' } }}>
       <IconButton
         size="large"
         onClick={openNavMenuHandler}
