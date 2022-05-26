@@ -1,19 +1,25 @@
 import React, { useState } from 'react'
 import { useActions } from '../hooks/useActions'
 
-interface ISearchProps {
-  getWord: (word: string) => void
-}
+const Search: React.FC = () => {
 
-const Search: React.FC<ISearchProps> = (props) => {
-
-  const { getWord } = props
   const [word, setWord] = useState('')
 
   const { fetchWord } = useActions()
 
+  const getWord = () => {
+    if (!word) {
+      return alert('Looks like you didn\'t enter anything...')
+    }
+    fetchWord(word)
+  }
+
+  const keyDownHandler: React.KeyboardEventHandler<HTMLInputElement> = (event) => {
+    if (event.code === 'Enter') getWord()
+  }
+
   const changeHandler: React.ChangeEventHandler<HTMLInputElement> = (event) => {
-    setWord(event.target.value)
+    setWord(event.target.value.trim())
   }
 
   return (
@@ -22,9 +28,10 @@ const Search: React.FC<ISearchProps> = (props) => {
         type="text"
         value={word}
         placeholder="Enter a word..."
+        onKeyDown={keyDownHandler}
         onChange={changeHandler}
       />
-      <button onClick={() => fetchWord(word)} >getHello</button>
+      <button onClick={getWord} >getHello</button>
     </>
   )
 }

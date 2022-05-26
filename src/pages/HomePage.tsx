@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
 
   return <div>
     HomePage
-    <Search getWord={(word) => {}} />
+    <Search />
     {
       word.word[0]
         ? <pre>{JSON.stringify(word.word, null, 2)}</pre>
