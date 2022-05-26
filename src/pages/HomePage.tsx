@@ -11,8 +11,8 @@ const HomePage: React.FC = () => {
     HomePage
     {
       word.word[0]
-        ? <pre>{JSON.stringify(word.word[0], null, 2)}</pre>
-        : <button onClick={() => fetchWord('hello')} >getHello</button>
+        ? <pre>{JSON.stringify(word.word, null, 2)}</pre>
+        : <button onClick={() => fetchWord('I')} >getHello</button>
     }
   </div>
 }

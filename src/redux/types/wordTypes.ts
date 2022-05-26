@@ -1,5 +1,36 @@
+export interface Word {
+  word: string
+  phonetic?: string
+  phonetics?: [
+    {
+      audio?: string
+      sourceUrl?: string
+    }
+  ],
+  meanings?: [
+    {
+      partOfSpeech: string
+      definitions: [
+        {
+          definition: string
+          synonyms: string[]
+          antonyms: string[]
+          example: string
+        }
+      ]
+      synonyms: string[]
+      antonyms: string[]
+    }
+  ],
+  license?: {
+    name: string
+    url: string
+  },
+  sourceUrls?: string[]
+}
+
 export interface WordState {
-  word: any[]
+  word: Word[]
   loading: boolean
   error: null | string
 }
@@ -19,7 +50,7 @@ interface FetchWordErrorAction {
 }
 interface FetchWordSuccessAction {
   type: WordActionTypes.FETCH_WORD_SUCCESS
-  payload: any[]
+  payload: Word[]
 }
 
 export type WordAction =
