@@ -1,0 +1,17 @@
+body {
+  padding: 0;
+  padding-top: 88px;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding-top: 84px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding-top: 76px;
+  }
+}
