@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AppBar, Toolbar, Container } from '@mui/material'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { Link } from '../../types'
 import AppLogo from './AppLogo'
 import DropDownMenu from './DropDownMenu'
@@ -12,9 +13,11 @@ const ResponsiveAppBar: React.FC = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
   const navigate = useNavigate()
 
+  const wordState = useTypedSelector(state => state.wordState)
+
   const links: Link[] = [
     {to: '/', label: 'Home'},
-    {to: '/result', label: 'Details'}
+    {to: `/result/${wordState.word}`, label: 'Details'}
   ]
 
   const openNavMenuHandler = (event: React.MouseEvent<HTMLElement>) => {

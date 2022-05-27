@@ -1,4 +1,4 @@
-import React, { Dispatch, useState } from 'react'
+import React, { Dispatch, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { Container, TextField } from '@mui/material'
@@ -24,7 +24,7 @@ const Search: React.FC = () => {
     try {
       setdisabled(true)
       await fetchWord(word)(dispatch)
-      navigate('/result')
+      navigate(`/result/${word}`)
     } catch(e) {
       navigate('/not-found')
     } finally {
@@ -41,6 +41,10 @@ const Search: React.FC = () => {
   const changeHandler: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     setWord(event.target.value.trim())
   }
+console.log('render search')
+  // useEffect(() => {
+  //   getWord()
+  // }, [])
 
   return (
     <Container>

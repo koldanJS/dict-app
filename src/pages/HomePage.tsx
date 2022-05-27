@@ -5,14 +5,14 @@ import Logo from '../components/Logo'
 
 const HomePage: React.FC = () => {
 
-  const word = useTypedSelector(state => state.word)
+  const wordState = useTypedSelector(state => state.wordState)
 
   return (
     <>
       <Logo />
       <Search />
       {
-        word.loading
+        wordState.loading
           ? <h1>Loading...</h1>
           : null
       }

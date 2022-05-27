@@ -1,4 +1,4 @@
-export interface Word {
+export interface WordDetails {
   word: string
   phonetic?: string
   phonetics?: [
@@ -41,8 +41,9 @@ export interface ErrorState {
   status: number
 }
 
-export interface WordState {
-  word: Word[]
+export interface WordDetailsState {
+  wordDetails: WordDetails[]
+  word: string
   loading: boolean
   error: null | ErrorState
 }
@@ -62,7 +63,7 @@ interface FetchWordErrorAction {
 }
 interface FetchWordSuccessAction {
   type: WordActionTypes.FETCH_WORD_SUCCESS
-  payload: Word[]
+  payload: WordDetails[]
 }
 
 export type WordAction =

@@ -4,19 +4,19 @@ import Search from '../components/Search'
 
 const ResultPage: React.FC = () => {
 
-  const word = useTypedSelector(state => state.word)
+  const wordState = useTypedSelector(state => state.wordState)
 
   return (
     <>
       <Search />
       {
-        word.word.length
-          ? <h1>{word.word[0].word}</h1>
+        wordState.word
+          ? <h1>{wordState.word}</h1>
           : null
       }
       
       {
-        word.loading
+        wordState.loading
           ? <h1>Loading...</h1>
           : null
       }
