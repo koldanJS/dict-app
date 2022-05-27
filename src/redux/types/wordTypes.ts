@@ -3,8 +3,13 @@ export interface Word {
   phonetic?: string
   phonetics?: [
     {
+      text?: string
       audio?: string
       sourceUrl?: string
+      license?: {
+        name: string
+        url: string
+      }
     }
   ],
   meanings?: [

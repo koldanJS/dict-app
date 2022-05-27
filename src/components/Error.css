@@ -1,0 +1,37 @@
+.error-container {
+  position: relative;
+}
+
+.error-container h1 {
+  margin-top: 15vh;
+}
+
+.error-container .error-image {
+  position: fixed;
+  right: 8vw;
+  top: 25vh;
+  height: 430px;
+}
+
+.error-image img {
+  height: 430px;
+}
+
+@media screen and (max-width: 900px) {
+  .error-image img {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .error-container h1 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .error-container .error-image {
+    position: static;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}

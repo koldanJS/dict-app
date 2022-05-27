@@ -1,9 +1,28 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import ErrorComponent from '../components/Error'
+import { useTypedSelector } from '../hooks/useTypedSelector'
+import { images } from '../img/images'
 
 const NotFoundPage: React.FC = () => {
-  return <div>
-    NotFound
-  </div>
+
+  const error = useTypedSelector(state => state.word.error)
+  const navigate = useNavigate()
+
+  const clickHandler = () => {
+    navigate('/')
+  }
+
+  return (
+    <ErrorComponent
+      label="Oops!"
+      title={'Looks like we didn\'t find your word...'}
+      status={`Error code: ${error?.status || 'unknown'}`}
+      returnTo="Back to home page"
+      clickHandler={clickHandler}
+      notFound={images.notFound}
+    />
+  )
 }
 
 export default NotFoundPage

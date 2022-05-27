@@ -21,11 +21,9 @@ const AppLogo: React.FC = () => {
         }}
       />
       <Typography
-        variant={(windowWidth > 900) ? 'h6' : 'h5'}
-        noWrap
-        component="a"
+        variant={(windowWidth > 600) ? 'h5' : 'h6'}
+        component="div"
         sx={{
-          mr: 0,
           display: (windowWidth > 900)
             ? { xs: 'none', md: 'flex' }
             : { xs: 'flex', md: 'none' },
@@ -33,8 +31,7 @@ const AppLogo: React.FC = () => {
           fontFamily: 'monospace',
           fontWeight: 700,
           color: 'inherit',
-          letterSpacing: '.3rem',
-          textDecoration: 'none'
+          letterSpacing: '.3rem'
         }}
       >
         DICT
