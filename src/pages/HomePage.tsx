@@ -7,15 +7,17 @@ const HomePage: React.FC = () => {
 
   const word = useTypedSelector(state => state.word)
 
-  return <div>
-    <Logo />
-    <Search />
-    {
-      word.word[0]
-        ? <pre>{JSON.stringify(word.word, null, 2)}</pre>
-        : null
-    }
-  </div>
+  return (
+    <>
+      <Logo />
+      <Search />
+      {
+        word.loading
+          ? <h1>Loading...</h1>
+          : null
+      }
+    </>
+  )
 }
 
 export default HomePage

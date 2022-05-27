@@ -29,10 +29,17 @@ export interface Word {
   sourceUrls?: string[]
 }
 
+export interface ErrorState {
+  message: string
+  resolution: string
+  title: string
+  status: number
+}
+
 export interface WordState {
   word: Word[]
   loading: boolean
-  error: null | string
+  error: null | ErrorState
 }
 
 export enum WordActionTypes {
@@ -46,7 +53,7 @@ interface FetchWordAction {
 }
 interface FetchWordErrorAction {
   type: WordActionTypes.FETCH_WORD_ERROR
-  payload: string
+  payload: ErrorState
 }
 interface FetchWordSuccessAction {
   type: WordActionTypes.FETCH_WORD_SUCCESS

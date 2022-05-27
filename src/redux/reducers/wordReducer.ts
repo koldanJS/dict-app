@@ -10,6 +10,8 @@ export const wordReducer = (state = initialState, action: WordAction): WordState
   switch (action.type) {
   case WordActionTypes.FETCH_WORD: return {
     ...state,
+    word: [],
+    error: null,
     loading: true
   }
   case WordActionTypes.FETCH_WORD_ERROR: return {

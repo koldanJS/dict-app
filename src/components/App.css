@@ -4,15 +4,15 @@ body {
   margin: 0;
 }
 
-.app-logo-container {
+.app-logo.container {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin: 20px 0;
 }
 
 .app-logo {
-  width: 400px;
-  margin: 20px 0;
+  height: 310px;
 }
 
 @media screen and (max-width: 900px) {
@@ -20,9 +20,13 @@ body {
     padding-top: 84px;
   }
 
-  .app-logo {
-    width: 300px;
+  .app-logo.container {
+    height: 230px;
     margin: 15px 0;
+  }
+
+  .app-logo {
+    height: 230px;
   }
 }
 
@@ -31,8 +35,12 @@ body {
     padding-top: 76px;
   }
 
-  .app-logo {
-    width: 200px;
+  .app-logo.container {
+    height: 150px;
     margin: 10px 0;
+  }
+
+  .app-logo {
+    height: 150px;
   }
 }
