@@ -8,7 +8,6 @@ const Search: React.FC = () => {
 
   const [word, setWord] = useState('')
   const [isAlert, setIsAlert] = useState(false)
-
   const { fetchWord } = useActions()
 
   const getWord = () => {
@@ -22,7 +21,7 @@ const Search: React.FC = () => {
   }
 
   const keyDownHandler: React.KeyboardEventHandler<HTMLInputElement> = (event) => {
-    if (event.code === 'Enter') getWord()
+    if (event.key === 'Enter') getWord()
   }
 
   const changeHandler: React.ChangeEventHandler<HTMLInputElement> = (event) => {
@@ -33,6 +32,7 @@ const Search: React.FC = () => {
     <Container>
       <TextField
         fullWidth
+        autoFocus={true}
         type="text"
         label="Enter a word and press 'Enter' to see more..."
         variant="filled"
@@ -43,7 +43,7 @@ const Search: React.FC = () => {
       />
       {
         isAlert
-          ? <Alert />
+          ? <Alert message="Looks like you didn\'t enter anything..." />
           : null
       }
     </Container>
