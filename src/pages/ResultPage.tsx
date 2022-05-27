@@ -14,7 +14,7 @@ const ResultPage: React.FC = () => {
           ? <h1>{wordState.word}</h1>
           : null
       }
-      
+
       {
         wordState.loading
           ? <h1>Loading...</h1>

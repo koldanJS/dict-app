@@ -8,6 +8,7 @@ const RoutesComponent: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/result" element={<ResultPage />} />
       <Route path="/result/:word" element={<ResultPage />} />
       <Route path="/not-found" element={<NotFoundPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />

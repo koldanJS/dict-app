@@ -1,5 +1,5 @@
 import React, { Dispatch, useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { Container, TextField } from '@mui/material'
 import { WordAction } from '../redux/types/wordTypes'
@@ -12,9 +12,12 @@ const Search: React.FC = () => {
   const [isAlert, setIsAlert] = useState(false)
   const [disabled, setdisabled] = useState(false)
   const navigate = useNavigate()
-  const dispatch: Dispatch<WordAction> = useDispatch()
+  const location = useLocation()
 
-  const getWord = async () => {
+  const dispatch: Dispatch<WordAction> = useDispatch()
+  const path = location.pathname
+
+  const getWord = async (word: string) => {
     if (!word) {
       setTimeout(() => {
         setIsAlert(false)
@@ -29,22 +32,25 @@ const Search: React.FC = () => {
       navigate('/not-found')
     } finally {
       setdisabled(false)
+      setWord('')
     }
   }
 
   const keyDownHandler: React.KeyboardEventHandler<HTMLInputElement> = (event) => {
     if (event.key === 'Enter') {
-      getWord()
+      getWord(word)
     }
   }
 
   const changeHandler: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     setWord(event.target.value.trim())
   }
-console.log('render search')
-  // useEffect(() => {
-  //   getWord()
-  // }, [])
+
+  useEffect(() => {
+    if (path.includes('/result/') && path.replace('/result/', '')) {
+      getWord(path.replace('/result/', ''))
+    }
+  }, [path])
 
   return (
     <Container>
