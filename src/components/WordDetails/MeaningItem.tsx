@@ -28,7 +28,7 @@ const MeaningItem: React.FC<Meanings> = (props) => {
       >
         <Typography
           sx={{
-            width: '50%',
+            width: '40vw',
             flexShrink: 0
           }}
         >

@@ -26,12 +26,25 @@ const DefinitionsTabs: React.FC<IDefinitionsTabsProps> = (props) => {
         variant="scrollable"
         value={value}
         onChange={handleChange}
-        sx={{borderRight: 1, borderColor: 'divider'}}
+        sx={{
+          borderRight: 1,
+          borderColor: 'divider',
+          overflow: 'visible'
+        }}
       >
         {
           definitions?.map((definitionItem, index) => {
             return (
-              <Tab key={index} label={definitionItem.definition} />
+              <Tab
+                key={index}
+                label={definitionItem.definition}
+                sx={{
+                  textAlign: 'left',
+                  alignItems: 'flex-start', 
+                  maxWidth: 700,
+                  width: '40vw'
+                }}
+              />
             )
           })
         }
