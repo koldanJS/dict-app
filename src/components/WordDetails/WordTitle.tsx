@@ -16,7 +16,6 @@ const WordTitle: React.FC<IWordTitleProps> = (props) => {
         variant="h2"
         component="h2"
         sx={{
-          fontFamily: 'monospace',
           fontWeight: 700,
           color: 'inherit',
           letterSpacing: '.3rem'
@@ -29,7 +28,6 @@ const WordTitle: React.FC<IWordTitleProps> = (props) => {
         component="h2"
         sx={{
           whiteSpace: 'nowrap',
-          fontFamily: 'monospace',
           color: 'inherit'
         }}
       >

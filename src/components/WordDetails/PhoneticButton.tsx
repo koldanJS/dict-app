@@ -19,6 +19,7 @@ const PhoneticButton: React.FC<IPhoneticButtonProps> = (props) => {
   return (
     <Button
       variant="text"
+      sx={{textTransform: 'lowercase'}}
       onClick={playAudio}
       endIcon={ audio ? <VolumeUpIcon/> : null}
       disabled={!audio}

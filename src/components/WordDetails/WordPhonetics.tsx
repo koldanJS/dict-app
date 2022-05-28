@@ -33,7 +33,7 @@ const WordPhonetics: React.FC<IWordPhoneticsProps> = (props) => {
         return (
           <ListItem key={index}>
             <PhoneticButton
-              text={phoneticItem.text}
+              text={phoneticItem.text?.toLowerCase()}
               audio={phoneticItem.audio}
             />
           </ListItem>
