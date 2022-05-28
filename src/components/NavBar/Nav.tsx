@@ -36,7 +36,7 @@ const ResponsiveAppBar: React.FC = () => {
 
   return (
     <AppBar position="fixed">
-      <Container maxWidth="xl">
+      <Container>
         <Toolbar disableGutters>
           <DropDownMenu
             anchorElNav={anchorElNav}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTypedSelector } from '../hooks/useTypedSelector'
 import Search from '../components/Search'
+import WordDetails from '../components/WordDetails/WordDetails'
 
 const ResultPage: React.FC = () => {
 
@@ -11,10 +12,9 @@ const ResultPage: React.FC = () => {
       <Search />
       {
         wordState.word
-          ? <h1>{wordState.word}</h1>
+          ? <WordDetails word={wordState.word} wordDetails={wordState.wordDetails} />
           : null
       }
-
       {
         wordState.loading
           ? <h1>Loading...</h1>
