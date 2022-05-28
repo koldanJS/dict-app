@@ -14,6 +14,7 @@ const TabPanel: React.FC<ITabPanelProps> = (props) => {
 
   return (
     <div
+      style={{flexGrow: 1}}
       role="tabpanel"
       hidden={value !== index}
     >
