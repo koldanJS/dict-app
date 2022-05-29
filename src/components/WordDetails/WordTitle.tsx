@@ -11,14 +11,16 @@ const WordTitle: React.FC<IWordTitleProps> = (props) => {
   const { word, defaultPhonetic } = props
 
   return (
-    <div style={{display: 'flex', justifyContent: 'center'}} >
+    <div>
       <Typography
         variant="h2"
         component="h2"
         sx={{
+          display: 'inline-block',
           fontWeight: 700,
           color: 'inherit',
-          letterSpacing: '.3rem'
+          mt: 2,
+          mr: 2
         }}
       >
         {word}
@@ -27,6 +29,7 @@ const WordTitle: React.FC<IWordTitleProps> = (props) => {
         variant="h2"
         component="h2"
         sx={{
+          display: 'inline-block',
           whiteSpace: 'nowrap',
           color: 'inherit'
         }}

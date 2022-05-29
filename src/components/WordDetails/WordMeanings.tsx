@@ -22,8 +22,7 @@ const WordMeanings: React.FC<IWordPhoneticsProps> = (props) => {
         width: '100%',
         listStyle: 'none',
         boxSizing: 'border-box',
-        p: 1,
-        m: 0
+        p: 1
       }}
       variant="outlined"
       component="ul"

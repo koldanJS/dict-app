@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+p {
+  margin: .5rem 0;
+}
+
 .app-logo.container {
   display: flex;
   justify-content: center;

@@ -41,10 +41,10 @@ const MeaningItem: React.FC<Meanings> = (props) => {
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>
+        <Typography sx={{display: 'inline-block', width: '40vw'}}>
           Definitions:
         </Typography>
-        <Typography>
+        <Typography sx={{display: 'inline-block'}}>
           Examples:
         </Typography>
         <DefinitionsTabs definitions={definitions} />

@@ -42,7 +42,8 @@ const DefinitionsTabs: React.FC<IDefinitionsTabsProps> = (props) => {
                   textAlign: 'left',
                   alignItems: 'flex-start', 
                   maxWidth: 700,
-                  width: '40vw'
+                  width: '40vw',
+                  p: '5px'
                 }}
               />
             )
