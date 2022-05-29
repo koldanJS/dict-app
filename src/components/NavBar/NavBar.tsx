@@ -8,7 +8,7 @@ import DropDownMenu from './DropDownMenu'
 import NavMenu from './NavMenu'
 import ToggleTheme from './ToggleTheme'
 
-const ResponsiveAppBar: React.FC = () => {
+const NavBar: React.FC = () => {
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
   const navigate = useNavigate()
@@ -50,11 +50,11 @@ const ResponsiveAppBar: React.FC = () => {
             clickHandler={clickHandler}
             links={links}
           />
-          <ToggleTheme />
+          <ToggleTheme theme={wordState.theme} />
         </Toolbar>
       </Container>
     </AppBar>
   )
 }
 
-export default ResponsiveAppBar
+export default NavBar

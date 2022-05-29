@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useDispatch } from 'react-redux'
 import {
   Box,
   FormGroup,
   FormControlLabel,
   Switch
 } from '@mui/material'
+import { toggleTheme } from '../../redux/actions/wordAction'
 
-const ToggleTheme: React.FC = () => {
+interface IToggleThemeProps {
+  theme: string
+}
 
-  const [theme, setTheme] = useState({name: 'White', isChecked: false})
+const ToggleTheme: React.FC<IToggleThemeProps> = (props) => {
 
-  const toggleTheme = () => {
-    if (theme.isChecked === false) {
-      setTheme({name: 'Dark', isChecked: true})
-    } else {
-      setTheme({name: 'White', isChecked: false})
-    }
-  }
+  const { theme } = props
+  const dispatch = useDispatch()
 
   return (
     <Box sx={{ flexGrow: 0, width: '100px' }}>
@@ -25,11 +24,11 @@ const ToggleTheme: React.FC = () => {
           labelPlacement="start"
           control={
             <Switch
-              checked={theme.isChecked}
-              onChange={toggleTheme}
+              checked={theme === 'Dark'}
+              onChange={() => dispatch(toggleTheme())}
             />
           }
-          label={theme.name}
+          label={theme}
         />
       </FormGroup>
     </Box>

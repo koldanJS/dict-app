@@ -1,6 +1,10 @@
 import { Dispatch } from 'react'
 import { WordAction, WordActionTypes } from '../types/wordTypes'
 
+export const toggleTheme = () => ({
+  type: WordActionTypes.TOGGLE_THEME
+})
+
 export const fetchWord = (word: string) => {
   return async (dispatch: Dispatch<WordAction>) => {
     try {

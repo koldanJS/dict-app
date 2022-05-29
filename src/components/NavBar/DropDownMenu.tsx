@@ -22,7 +22,13 @@ const DropDownMenu: React.FC<IDropDownMenuProps> = (props) => {
   const { anchorElNav, openNavMenuHandler, closeNavMenuHandler, clickHandler, links } = props
 
   return (
-    <Box sx={{ flexGrow: 1, width: '100px', display: { xs: 'flex', md: 'none' } }}>
+    <Box
+      sx={{
+        flexGrow: 1,
+        width: '100px',
+        display: { xs: 'flex', md: 'none' }
+      }}
+    >
       <IconButton
         size="large"
         onClick={openNavMenuHandler}
@@ -47,13 +53,18 @@ const DropDownMenu: React.FC<IDropDownMenuProps> = (props) => {
           display: { xs: 'block', md: 'none' }
         }}
       >
-        {links.map((link) => (
-          <MenuItem key={link.label} onClick={() => clickHandler(link.to)}>
-            <Typography textAlign="center">{link.label}</Typography>
-          </MenuItem>
-        ))}
+        {
+          links.map((link) => (
+            <MenuItem key={link.label} onClick={() => clickHandler(link.to)}>
+              <Typography textAlign="center">
+                {link.label}
+              </Typography>
+            </MenuItem>
+          ))
+        }
       </Menu>
     </Box>
   )
 }
+
 export default DropDownMenu

@@ -40,17 +40,19 @@ export interface ErrorState {
   status: number
 }
 
-export interface WordDetailsState {
+export interface WordState {
   wordDetails: WordDetails[]
   word: string
   loading: boolean
   error: null | ErrorState
+  theme: string
 }
 
 export enum WordActionTypes {
   FETCH_WORD = 'FETCH_WORD',
   FETCH_WORD_ERROR = 'FETCH_WORD_ERROR',
-  FETCH_WORD_SUCCESS = 'FETCH_WORD_SUCCESS'
+  FETCH_WORD_SUCCESS = 'FETCH_WORD_SUCCESS',
+  TOGGLE_THEME = 'TOGGLE_THEME'
 }
 
 interface FetchWordAction {
@@ -64,8 +66,12 @@ interface FetchWordSuccessAction {
   type: WordActionTypes.FETCH_WORD_SUCCESS
   payload: WordDetails[]
 }
+interface ToggleTheme {
+  type: WordActionTypes.TOGGLE_THEME
+}
 
 export type WordAction =
   FetchWordAction
   | FetchWordErrorAction
   | FetchWordSuccessAction
+  | ToggleTheme

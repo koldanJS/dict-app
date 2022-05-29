@@ -1,7 +1,9 @@
-import logo from './logo.svg'
+import whiteLogo from './whiteLogo.svg'
+import blackLogo from './blackLogo.svg'
 import notFound from './404.png'
 
 export const images = {
-  logo,
+  whiteLogo,
+  blackLogo,
   notFound
 }

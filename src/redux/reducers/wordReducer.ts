@@ -1,13 +1,14 @@
-import { WordAction, WordActionTypes, WordDetailsState } from '../types/wordTypes'
+import { WordAction, WordActionTypes, WordState } from '../types/wordTypes'
 
-const initialState: WordDetailsState = {
+const initialState: WordState = {
   wordDetails: [],
   word: '',
   loading: false,
-  error: null
+  error: null,
+  theme: 'Light'
 }
 
-export const wordReducer = (state = initialState, action: WordAction): WordDetailsState => {
+export const wordReducer = (state = initialState, action: WordAction): WordState => {
   switch (action.type) {
   case WordActionTypes.FETCH_WORD: return {
     ...state,
@@ -26,6 +27,10 @@ export const wordReducer = (state = initialState, action: WordAction): WordDetai
     wordDetails: action.payload,
     word: action.payload[0].word,
     loading: false
+  }
+  case WordActionTypes.TOGGLE_THEME: return {
+    ...state,
+    theme: (state.theme === 'Light') ? 'Dark' : 'Light'
   }
   default: return state
   }

@@ -1,6 +1,5 @@
 body {
   padding: 0;
-  padding-top: 88px;
   margin: 0;
 }
 
@@ -8,47 +7,22 @@ p {
   margin: .5rem 0;
 }
 
-.app-logo.container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 20px 0;
-}
-
-.app-logo {
-  height: 310px;
-}
-
 button:disabled {
   color: inherit !important;
 }
 
+.padding-box {
+  padding-top: 88px;
+}
+
 @media screen and (max-width: 900px) {
-  body {
-    padding-top: 84px;
-  }
-
-  .app-logo.container {
-    height: 230px;
-    margin: 15px 0;
-  }
-
-  .app-logo {
-    height: 230px;
+  .padding-box {
+    padding-top: 78px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  body {
-    padding-top: 76px;
-  }
-
-  .app-logo.container {
-    height: 150px;
-    margin: 10px 0;
-  }
-
-  .app-logo {
-    height: 150px;
+  .padding-box {
+    padding-top: 70px;
   }
 }

@@ -1,4 +1,6 @@
 import React from 'react'
+import CircularProgress from '@mui/material/CircularProgress'
+import Box from '@mui/material/Box'
 import { useTypedSelector } from '../hooks/useTypedSelector'
 import Search from '../components/Search'
 import Logo from '../components/Logo'
@@ -9,11 +11,19 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <Logo />
+      <Logo theme={wordState.theme} />
       <Search />
       {
         wordState.loading
-          ? <h1>Loading...</h1>
+          ? <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              mt: 3
+            }}
+          >
+            <CircularProgress />
+          </Box>
           : null
       }
     </>

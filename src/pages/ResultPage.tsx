@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container, Skeleton } from '@mui/material'
 import { useTypedSelector } from '../hooks/useTypedSelector'
 import Search from '../components/Search'
 import WordDetails from '../components/WordDetails/WordDetails'
@@ -17,7 +18,9 @@ const ResultPage: React.FC = () => {
       }
       {
         wordState.loading
-          ? <h1>Loading...</h1>
+          ? <Container>
+            <Skeleton width="100%" height="40vw" />
+          </Container>
           : null
       }
     </>
