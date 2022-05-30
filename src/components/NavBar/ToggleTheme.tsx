@@ -1,11 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import {
-  Box,
-  FormGroup,
-  FormControlLabel,
-  Switch
-} from '@mui/material'
+import { Box, FormGroup, FormControlLabel, Switch } from '@mui/material'
 import { toggleTheme } from '../../redux/actions/wordAction'
 
 interface IToggleThemeProps {

@@ -5,7 +5,7 @@ import { Meanings } from '../../redux/types/wordTypes'
 import MeaningItem from './MeaningItem'
 
 interface IWordPhoneticsProps {
-  meanings?: Meanings[]
+  meanings: Meanings[]
 }
 
 const WordMeanings: React.FC<IWordPhoneticsProps> = (props) => {

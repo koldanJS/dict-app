@@ -5,7 +5,7 @@ import { Phonetics } from '../../redux/types/wordTypes'
 import PhoneticButton from './PhoneticButton'
 
 interface IWordPhoneticsProps {
-  phonetics?: Phonetics[]
+  phonetics: Phonetics[]
 }
 
 const WordPhonetics: React.FC<IWordPhoneticsProps> = (props) => {
@@ -30,7 +30,7 @@ const WordPhonetics: React.FC<IWordPhoneticsProps> = (props) => {
       component="ul"
     >
       {
-        phonetics?.map((phoneticItem, index) => {
+        phonetics.map((phoneticItem, index) => {
           return (
             <ListItem key={index}>
               <PhoneticButton

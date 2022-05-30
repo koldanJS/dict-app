@@ -13,14 +13,14 @@ interface IStyles {
     minHeight?: string
   }
   tabs: {
-    overflow?: string
+    overflow: string
     height?: string
     borderRight?: string
     borderColor?: string
   }
   tab: {
-    textAlign?: string
-    alignItems?: string
+    textAlign: string
+    alignItems: string
     maxWidth?: string
     width?: string
     p?: string

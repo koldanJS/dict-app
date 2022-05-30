@@ -39,10 +39,10 @@ const MeaningItem: React.FC<Meanings> = (props) => {
         </Typography>
         <DefinitionsTabs definitions={definitions} />
         <Typography>
-          Synonyms: {synonyms?.join(', ')}
+          Synonyms: {synonyms.join(', ')}
         </Typography>
         <Typography>
-          Antonyms: {antonyms?.join(', ')}
+          Antonyms: {antonyms.join(', ')}
         </Typography>
       </AccordionDetails>
     </Accordion>

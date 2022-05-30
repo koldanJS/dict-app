@@ -3,9 +3,9 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 
 interface ITabPanelProps {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
+  children?: React.ReactNode
+  index: number
+  value: number
 }
 
 const TabPanel: React.FC<ITabPanelProps> = (props) => {

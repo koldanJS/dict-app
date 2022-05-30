@@ -43,12 +43,12 @@ const WordDetailsComponent: React.FC<IWordDetailsProps> = (props) => {
       {
         wordDetails[page - 1].phonetics?.length
           ? <WordPhonetics
-            phonetics={wordDetails[page - 1]?.phonetics}
+            phonetics={wordDetails[page - 1].phonetics}
           />
           : null
       }
       <WordMeanings
-        meanings={wordDetails[page - 1]?.meanings}
+        meanings={wordDetails[page - 1].meanings}
       />
       <Pagination
         sx={{mt: 2}}

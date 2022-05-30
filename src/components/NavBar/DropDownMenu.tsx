@@ -1,12 +1,6 @@
 import React from 'react'
 import { Menu as MenuIcon } from '@mui/icons-material'
-import {
-  Box,
-  IconButton,
-  Typography,
-  Menu,
-  MenuItem
-} from '@mui/material'
+import { Box, IconButton, Typography, Menu, MenuItem } from '@mui/material'
 import { Link } from '../../types'
 
 interface IDropDownMenuProps {
