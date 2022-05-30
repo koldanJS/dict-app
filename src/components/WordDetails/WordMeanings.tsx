@@ -21,9 +21,9 @@ const WordMeanings: React.FC<IWordMeaningsProps> = (props) => {
       <h3>
         Part of speech
       </h3>
-      {meanings?.map((meaningItem, index) => {
+      {meanings?.map(meaningItem => {
         return (
-          <li key={index} >
+          <li key={Math.random()} >
             <MeaningItem
               {...meaningItem}
             />
