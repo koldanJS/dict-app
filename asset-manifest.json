@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dict-app/static/css/main.19c7a8b9.css",
+    "main.css": "/dict-app/static/css/main.4c605e0c.css",
     "main.js": "/dict-app/static/js/main.96414002.js",
     "static/media/blackLogo.svg": "/dict-app/static/media/blackLogo.b49a34aec75ffa2e5292f6115894ba56.svg",
     "static/media/whiteLogo.svg": "/dict-app/static/media/whiteLogo.3f00479097576dc430a1b61f1008906b.svg",
     "static/media/404.png": "/dict-app/static/media/404.f66e4d0592d2e5201951.png",
     "index.html": "/dict-app/index.html",
-    "main.19c7a8b9.css.map": "/dict-app/static/css/main.19c7a8b9.css.map",
+    "main.4c605e0c.css.map": "/dict-app/static/css/main.4c605e0c.css.map",
     "main.96414002.js.map": "/dict-app/static/js/main.96414002.js.map"
   },
   "entrypoints": [
-    "static/css/main.19c7a8b9.css",
+    "static/css/main.4c605e0c.css",
     "static/js/main.96414002.js"
   ]
 }
