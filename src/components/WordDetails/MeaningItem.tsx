@@ -26,17 +26,7 @@ const MeaningItem: React.FC<Meanings> = (props) => {
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
       >
-        <Typography
-          sx={{
-            width: '40vw',
-            flexShrink: 0
-          }}
-        >
-          Part of speech
-        </Typography>
-        <Typography
-          sx={{ color: 'text.secondary' }}
-        >
+        <Typography>
           {partOfSpeech}
         </Typography>
       </AccordionSummary>

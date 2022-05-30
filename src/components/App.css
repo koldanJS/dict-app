@@ -15,6 +15,10 @@ button:disabled {
   padding-top: 88px;
 }
 
+.MuiTabs-scrollButtons {
+  display: inline-flex !important;
+}
+
 @media screen and (max-width: 900px) {
   .padding-box {
     padding-top: 78px;

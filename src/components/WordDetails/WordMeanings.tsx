@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@mui/material/styles'
-import Paper from '@mui/material/Paper'
+import { Typography, Paper } from '@mui/material'
 import { Meanings } from '../../redux/types/wordTypes'
 import MeaningItem from './MeaningItem'
 
@@ -27,6 +27,9 @@ const WordMeanings: React.FC<IWordPhoneticsProps> = (props) => {
       variant="outlined"
       component="ul"
     >
+      <Typography ml="20px" >
+        Part of speech
+      </Typography>
       {meanings?.map((meaningItem, index) => {
         return (
           <ListItem key={index} >
