@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.app-logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: $mar3 0;
+
+  @media (max-width: $screen-width-mid) {
+    height: $logo-height-mid;
+    margin: $mar4 0;
+  }
+  @media (max-width: $screen-width-min) {
+    height: $logo-height-min;
+    margin: $mar5 0;
+  }
+
+  img {
+    height: $logo-height-max;
+
+    @media (max-width: $screen-width-mid) {
+      height: $logo-height-mid;
+    }
+    @media (max-width: $screen-width-min) {
+      height: $logo-height-min;
+    }
+  }
+}

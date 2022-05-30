@@ -1,0 +1,89 @@
+@import "../variables.scss";
+
+.not-found-container {
+  position: relative;
+
+  .not-found-label {
+    font-size: 96px;
+    font-family: monospace;
+    font-weight: $bold;
+    color: inherit;
+    letter-spacing: .3rem;
+    margin-top: 15vh;
+    margin-bottom: $mar1;
+  
+    @media (max-width: $screen-width-mid) {
+      font-size: 80px;
+      font-weight: $bold;
+      letter-spacing: .2rem;
+      margin-bottom: $mar3;
+    }
+    @media (max-width: $screen-width-min) {
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
+  .not-found-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 430px;
+
+    @media (max-width: $screen-width-min) {
+      position: static;
+      width: fit-content;
+      margin: 0 auto;
+    }
+    img {
+      height: 430px;
+    
+      @media (max-width: $screen-width-mid) {
+        height: 350px;
+      }
+    
+      @media (max-width: $screen-width-min) {
+        position: static;
+        width: fit-content;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .not-found-title {
+    color: inherit;
+    width: 350px;
+  
+    @media (max-width: $screen-width-mid) {
+      width: 300px;
+    }
+  }
+
+  .not-found-status {
+    font-weight: $bold;
+    color: inherit;
+    margin: $mar3 0;
+  
+    @media (max-width: $screen-width-mid) {
+      margin: $mar4 0;
+    }
+  }
+
+  .not-found-link {
+    font-size: 14px;
+    font-weight: $bold;
+    color: inherit;
+    text-decoration: underline;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: $opacity-hover;
+    }
+    &:active {
+      opacity: $opacity-active;
+    }
+  }
+}

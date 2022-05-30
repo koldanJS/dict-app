@@ -5,6 +5,7 @@ import { Container, TextField } from '@mui/material'
 import { WordAction } from '../redux/types/wordTypes'
 import { fetchWord } from '../redux/actions/wordAction'
 import Alert from './Alert'
+import './Search.scss'
 
 const Search: React.FC = () => {
 
@@ -55,6 +56,7 @@ const Search: React.FC = () => {
   return (
     <Container>
       <TextField
+        className="search-field"
         disabled={disabled}
         fullWidth
         autoFocus={true}

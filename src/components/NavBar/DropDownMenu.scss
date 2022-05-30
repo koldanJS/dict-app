@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.drop-down-menu {
+  display: none;
+  flex-grow: 1;
+  width: 100px;
+
+  @media (max-width: $screen-width-mid) {
+  display: flex;
+  }
+
+  .menu {
+    display: block;
+
+    @media (max-width: $screen-width-mid) {
+      display: none;
+      }
+  }
+}
+

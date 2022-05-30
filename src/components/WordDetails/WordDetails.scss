@@ -1,0 +1,12 @@
+@import "../../variables.scss";
+
+.word-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .pagination {
+    margin-top: $mar-sub1;
+  }
+}
+

@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.word-meanings {
+  width: 100%;
+  list-style: none;
+  box-sizing: border-box;
+  padding: $pad-sub2;
+  
+  h3 {
+    font-size: $size7;
+    margin-left: $mar-sub1;
+
+    @media (max-width: $screen-width-mid) {
+      font-size: $size8;
+    }
+    @media (max-width: $screen-width-min) {
+      font-size: $size9;
+    }
+  }
+}
+

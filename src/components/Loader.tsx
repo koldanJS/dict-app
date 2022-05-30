@@ -1,6 +1,6 @@
 import React from 'react'
-import CircularProgress from '@mui/material/CircularProgress'
-import Box from '@mui/material/Box'
+import { Box, CircularProgress } from '@mui/material'
+import './Loader.scss'
 
 interface ILoaderProps {
   loading: boolean
@@ -12,13 +12,7 @@ const Loader: React.FC<ILoaderProps> = (props) => {
 
   return (
     loading
-      ? <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          mt: 3
-        }}
-      >
+      ? <Box className="loader">
         <CircularProgress />
       </Box>
       : null

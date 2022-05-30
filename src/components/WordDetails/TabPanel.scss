@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+.tab-panel {
+  padding: $pad2;
+
+  @media (max-width: $screen-width-mid) {
+    padding: $pad-sub1;
+  }
+  @media (max-width: $screen-width-min) {
+    padding: $pad-sub2;
+  }
+
+  div {
+    font-size: $size7;
+
+    @media (max-width: $screen-width-mid) {
+      font-size: $size8;
+    }
+    
+    
+    @media (max-width: $screen-width-min) {
+      font-size: $size9;
+    }
+  }
+}
+
+
+

@@ -1,42 +1,33 @@
 import React from 'react'
-import { styled } from '@mui/material/styles'
-import { Typography, Paper } from '@mui/material'
+import { Paper } from '@mui/material'
 import { Meanings } from '../../redux/types/wordTypes'
 import MeaningItem from './MeaningItem'
+import './WordMeanings.scss'
 
-interface IWordPhoneticsProps {
+interface IWordMeaningsProps {
   meanings: Meanings[]
 }
 
-const WordMeanings: React.FC<IWordPhoneticsProps> = (props) => {
+const WordMeanings: React.FC<IWordMeaningsProps> = (props) => {
 
   const { meanings } = props
 
-  const ListItem = styled('li')(({ theme }) => ({
-    margin: theme.spacing(0.5)
-  }))
-
   return (
     <Paper
-      sx={{
-        width: '100%',
-        listStyle: 'none',
-        boxSizing: 'border-box',
-        p: 1
-      }}
+      className="word-meanings"
       variant="outlined"
       component="ul"
     >
-      <Typography ml="20px" >
+      <h3>
         Part of speech
-      </Typography>
+      </h3>
       {meanings?.map((meaningItem, index) => {
         return (
-          <ListItem key={index} >
+          <li key={index} >
             <MeaningItem
               {...meaningItem}
             />
-          </ListItem>
+          </li>
         )
       })}
     </Paper>

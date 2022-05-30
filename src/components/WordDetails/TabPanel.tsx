@@ -1,6 +1,6 @@
 import React from 'react'
-import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
+import { Box } from '@mui/material'
+import './TabPanel.scss'
 
 interface ITabPanelProps {
   children?: React.ReactNode
@@ -13,16 +13,12 @@ const TabPanel: React.FC<ITabPanelProps> = (props) => {
   const { children, value, index } = props
 
   return (
-    <div
-      style={{flexGrow: 1}}
-      role="tabpanel"
-      hidden={value !== index}
-    >
+    <div hidden={value !== index}>
       {value === index && (
-        <Box sx={{ p: 3}}>
-          <Typography component="div" >
+        <Box className="tab-panel">
+          <div>
             {children}
-          </Typography>
+          </div>
         </Box>
       )}
     </div>

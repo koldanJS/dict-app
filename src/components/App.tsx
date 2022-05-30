@@ -4,7 +4,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { useTypedSelector } from '../hooks/useTypedSelector'
 import NavBar from './NavBar/NavBar'
 import Routes from './Routes'
-import './App.css'
+import './App.scss'
 
 const darkTheme = createTheme({
   palette: {
@@ -27,14 +27,9 @@ const App: React.FC = () => {
       <Box
         className="padding-box"
         sx={{
-          position: 'absolute',
-          top: 0,
-          boxSizing: 'border-box',
-          minHeight: '100vh',
-          width: '100vw',
           bgcolor: 'background.default',
           color: 'text.primary'
-        }}
+        }}  
       >
         <Container maxWidth="xl">
           <NavBar />

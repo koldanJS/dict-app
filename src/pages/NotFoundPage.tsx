@@ -1,9 +1,9 @@
-import { Container } from '@mui/material'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import ErrorComponent from '../components/Error'
+import { Container } from '@mui/material'
 import { useTypedSelector } from '../hooks/useTypedSelector'
 import { images } from '../img/images'
+import NotFound from '../components/NotFound'
 
 const NotFoundPage: React.FC = () => {
 
@@ -16,7 +16,7 @@ const NotFoundPage: React.FC = () => {
 
   return (
     <Container>
-      <ErrorComponent
+      <NotFound
         label="Oops!"
         title={'Looks like we didn\'t find your word...'}
         status={`Error code: ${error?.status || 'unknown'}`}

@@ -4,6 +4,7 @@ import { WordDetails } from '../../redux/types/wordTypes'
 import WordPhonetics from './WordPhonetics'
 import WordTitle from './WordTitle'
 import WordMeanings from './WordMeanings'
+import './WordDetails.scss'
 
 interface IWordDetailsProps {
   word: string
@@ -29,13 +30,7 @@ const WordDetailsComponent: React.FC<IWordDetailsProps> = (props) => {
   }
 
   return (
-    <Container
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-      }}
-    >
+    <Container className="word-details" >
       <WordTitle
         word={word}
         defaultPhonetic={transformPhoneticString(defaultPhonetic)}
@@ -51,7 +46,7 @@ const WordDetailsComponent: React.FC<IWordDetailsProps> = (props) => {
         meanings={wordDetails[page - 1].meanings}
       />
       <Pagination
-        sx={{mt: 2}}
+        className="pagination"
         count={wordDetails.length}
         page={page}
         onChange={changeHandler}

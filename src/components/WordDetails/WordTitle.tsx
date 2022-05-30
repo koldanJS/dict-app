@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@mui/material'
+import './WordTitle.scss'
 
 interface IWordTitleProps {
   word: string
@@ -11,30 +11,13 @@ const WordTitle: React.FC<IWordTitleProps> = (props) => {
   const { word, defaultPhonetic } = props
 
   return (
-    <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}} >
-      <Typography
-        variant="h2"
-        component="h2"
-        align="center"
-        sx={{
-          fontWeight: 700,
-          color: 'inherit',
-          mr: 2
-        }}
-      >
+    <div className="word-title">
+      <h1 className="word-title-word">
         {word}
-      </Typography>
-      <Typography
-        variant="h2"
-        component="h2"
-        align="center"
-        sx={{
-          whiteSpace: 'nowrap',
-          color: 'inherit'
-        }}
-      >
+      </h1>
+      <h1 className="word-title-phonetic">
         {defaultPhonetic}
-      </Typography>
+      </h1>
     </div>
   )
 }

@@ -1,0 +1,42 @@
+@import "../../variables.scss";
+
+.word-title {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: $mar5;
+
+  .word-title-word {
+    font-size: $size1;
+    font-weight: $bold;
+    align-self: center;
+    color: inherit;
+    margin: 0;
+    margin-right: $mar-sub1;
+
+    @media (max-width: $screen-width-mid) {
+      font-size: $size2;
+      margin-right: $mar-sub2;
+    }
+    @media (max-width: $screen-width-min) {
+      font-size: $size3;
+      margin-right: $mar-sub3;
+    }
+  }
+  
+  .word-title-phonetic {
+    font-size: $size2;
+    font-weight: $regular;
+    align-self: center;
+    color: inherit;
+    margin: 0;
+
+    @media (max-width: $screen-width-mid) {
+      font-size: $size3;
+    }
+    
+    @media (max-width: $screen-width-min) {
+      font-size: $size4;
+    }
+  }
+}

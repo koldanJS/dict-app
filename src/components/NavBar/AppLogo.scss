@@ -1,0 +1,23 @@
+@import "../../variables.scss";
+
+.logo-icon {
+  display: flex;
+  margin-right: $mar-sub3;
+}
+
+.logo-lable {
+    display: flex;
+    flex-grow: 0;
+    font-size: $size5;
+    font-family: monospace;
+    font-weight: $bold;
+    color: inherit;
+    letter-spacing: .3rem;
+
+  @media (max-width: $screen-width-mid) {
+    flex-grow: 1;
+  }
+  @media (max-width: $screen-width-min) {
+    font-size: $size6;
+  }
+}

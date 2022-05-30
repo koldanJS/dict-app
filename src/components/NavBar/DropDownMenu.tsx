@@ -2,6 +2,7 @@ import React from 'react'
 import { Menu as MenuIcon } from '@mui/icons-material'
 import { Box, IconButton, Typography, Menu, MenuItem } from '@mui/material'
 import { Link } from '../../types'
+import './DropDownMenu.scss'
 
 interface IDropDownMenuProps {
   anchorElNav: null | HTMLElement
@@ -16,13 +17,7 @@ const DropDownMenu: React.FC<IDropDownMenuProps> = (props) => {
   const { anchorElNav, openNavMenuHandler, closeNavMenuHandler, clickHandler, links } = props
 
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        width: '100px',
-        display: { xs: 'flex', md: 'none' }
-      }}
-    >
+    <Box className="drop-down-menu" >
       <IconButton
         size="large"
         onClick={openNavMenuHandler}
@@ -31,6 +26,7 @@ const DropDownMenu: React.FC<IDropDownMenuProps> = (props) => {
         <MenuIcon />
       </IconButton>
       <Menu
+        className="menu"
         anchorEl={anchorElNav}
         anchorOrigin={{
           vertical: 'bottom',
@@ -43,9 +39,6 @@ const DropDownMenu: React.FC<IDropDownMenuProps> = (props) => {
         }}
         open={Boolean(anchorElNav)}
         onClose={closeNavMenuHandler}
-        sx={{
-          display: { xs: 'block', md: 'none' }
-        }}
       >
         {
           links.map((link) => (

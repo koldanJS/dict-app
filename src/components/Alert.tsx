@@ -1,6 +1,6 @@
 import React from 'react'
-import Alert from '@mui/material/Alert'
-import Stack from '@mui/material/Stack'
+import { Stack, Alert } from '@mui/material'
+import './Alert.scss'
 
 interface AlertProps {
   message: string
@@ -11,7 +11,7 @@ const AlertComponent: React.FC<AlertProps> = (props) => {
   const { message } = props
 
   return (
-    <Stack sx={{ width: '100%', m: '10px 0' }} spacing={2}>
+    <Stack className="alert" spacing={2}>
       <Alert severity="warning">{message}</Alert>
     </Stack>
   )

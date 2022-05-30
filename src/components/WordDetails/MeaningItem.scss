@@ -1,0 +1,31 @@
+@import "../../variables.scss";
+
+.meaning-item {
+  margin: $mar5 0;
+
+  p, h4 {
+    font-size: $size7;
+
+    @media (max-width: $screen-width-mid) {
+      font-size: $size8;
+    }
+    @media (max-width: $screen-width-min) {
+      font-size: $size9;
+    }
+  }
+
+  .part-of-speech {
+    margin: 0;
+  }
+  .definitions {
+    display: inline-block;
+    width: 40vw;
+  }
+  .examples {
+    display: inline-block;
+  
+    @media (max-width: $screen-width-min) {
+      display: none;
+    }
+  }
+}

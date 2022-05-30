@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+button.phonetic-button {
+  text-transform: lowercase;
+  font-size: $size8;
+  min-width: 0;
+
+  @media (max-width: $screen-width-mid) {
+    font-size: $size9;
+  }
+  
+  
+  @media (max-width: $screen-width-min) {
+    font-size: $size10;
+  }
+}

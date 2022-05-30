@@ -1,0 +1,25 @@
+@import "../../variables.scss";
+
+.word-phonetics {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: $pad6;
+  margin: $mar3 0;
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .phonetic-button {
+    @media (max-width: $screen-width-mid) {
+      font-size: $size9;
+    }
+    @media (max-width: $screen-width-min) {
+      font-size: $size10;
+    }
+  }
+}
+

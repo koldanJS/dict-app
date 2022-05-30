@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Button } from '@mui/material'
 import { Link } from '../../types'
+import './NavMenu.scss'
 
 interface INavMenuProps {
   clickHandler: (to:string) => void
@@ -12,22 +13,12 @@ const NavMenu: React.FC<INavMenuProps> = (props) => {
   const { clickHandler, links } = props
 
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        display: { xs: 'none', md: 'flex' }
-      }}
-    >
+    <Box className="nav-menu" >
       {
         links.map((link) => (
           <Button
             key={link.label}
             onClick={() => clickHandler(link.to)}
-            sx={{
-              my: 2,
-              color: 'white',
-              display: 'block'
-            }}
           >
             {link.label}
           </Button>

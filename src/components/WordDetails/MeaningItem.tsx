@@ -1,11 +1,9 @@
 import React from 'react'
-import Accordion from '@mui/material/Accordion'
-import AccordionDetails from '@mui/material/AccordionDetails'
-import AccordionSummary from '@mui/material/AccordionSummary'
-import Typography from '@mui/material/Typography'
+import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { Meanings } from '../../redux/types/wordTypes'
 import DefinitionsTabs from './DefinitionsTabs'
+import './MeaningItem.scss'
 
 const MeaningItem: React.FC<Meanings> = (props) => {
 
@@ -20,30 +18,31 @@ const MeaningItem: React.FC<Meanings> = (props) => {
 
   return (
     <Accordion
+      className="meaning-item"
       expanded={expanded === 'panel1'}
       onChange={handleChange('panel1')}
     >
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
       >
-        <Typography>
+        <h4 className="part-of-speech">
           {partOfSpeech}
-        </Typography>
+        </h4>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography sx={{display: 'inline-block', width: '40vw'}}>
+        <p className="definitions">
           Definitions:
-        </Typography>
-        <Typography sx={{display: 'inline-block'}}>
+        </p>
+        <p className="examples">
           Examples:
-        </Typography>
+        </p>
         <DefinitionsTabs definitions={definitions} />
-        <Typography>
+        <p>
           Synonyms: {synonyms.join(', ')}
-        </Typography>
-        <Typography>
+        </p>
+        <p>
           Antonyms: {antonyms.join(', ')}
-        </Typography>
+        </p>
       </AccordionDetails>
     </Accordion>
   )

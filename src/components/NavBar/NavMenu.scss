@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.nav-menu {
+  display: flex;
+  flex-grow: 1;
+
+  @media (max-width: $screen-width-mid) {
+    display: none;
+  }
+
+  button {
+    margin: $mar-sub1 0;
+    color: white;
+  }
+}
+

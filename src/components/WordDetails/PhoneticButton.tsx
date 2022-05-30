@@ -1,6 +1,7 @@
 import React from 'react'
-import VolumeUpIcon from '@mui/icons-material/VolumeUp'
 import { Button } from '@mui/material'
+import VolumeUpIcon from '@mui/icons-material/VolumeUp'
+import './PhoneticButton.scss'
 
 interface IPhoneticButtonProps {
   text?: string
@@ -18,8 +19,9 @@ const PhoneticButton: React.FC<IPhoneticButtonProps> = (props) => {
 
   return (
     <Button
+      className="phonetic-button"
       variant="text"
-      sx={{textTransform: 'lowercase'}}
+      size="small"
       onClick={playAudio}
       endIcon={ audio ? <VolumeUpIcon/> : null}
       disabled={!audio}

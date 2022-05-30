@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+.search-field {
+  font-size: $size7;
+
+  @media (max-width: $screen-width-mid) {
+    font-size: $size8;
+  }
+  @media (max-width: $screen-width-min) {
+    font-size: $size9;
+  }
+
+  label, div {
+    font-size: inherit;
+  }
+}
