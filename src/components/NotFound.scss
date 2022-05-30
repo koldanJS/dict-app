@@ -33,6 +33,7 @@
     @media (max-width: $screen-width-min) {
       position: static;
       width: fit-content;
+      height: 250px;
       margin: 0 auto;
     }
     img {
@@ -40,11 +41,14 @@
     
       @media (max-width: $screen-width-mid) {
         height: 350px;
+        
       }
     
       @media (max-width: $screen-width-min) {
         position: static;
         width: fit-content;
+        height: 250px;
+        object-fit: contain;
         margin: 0 auto;
       }
     }
