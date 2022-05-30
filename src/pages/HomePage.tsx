@@ -6,13 +6,13 @@ import Loader from '../components/Loader'
 
 const HomePage: React.FC = () => {
 
-  const wordState = useTypedSelector(state => state.wordState)
+  const appState = useTypedSelector(state => state.appState)
 
   return (
     <>
-      <Logo theme={wordState.theme} />
+      <Logo theme={appState.theme} />
       <Search />
-      <Loader loading={wordState.loading} />
+      <Loader loading={appState.loading} />
     </>
   )
 }

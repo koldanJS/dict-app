@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import { wordReducer } from './wordReducer'
 
 export const rootReducer = combineReducers({
-  wordState: wordReducer
+  appState: wordReducer
 })
 
 export type RootState = ReturnType<typeof rootReducer>

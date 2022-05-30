@@ -13,11 +13,11 @@ const NavBar: React.FC = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
   const navigate = useNavigate()
 
-  const wordState = useTypedSelector(state => state.wordState)
+  const appState = useTypedSelector(state => state.appState)
 
   const links: Link[] = [
     {to: '/', label: 'Home'},
-    {to: `/result/${wordState.word}`, label: 'Details'}
+    {to: `/result/${appState.word}`, label: 'Details'}
   ]
 
   const openNavMenuHandler = (event: React.MouseEvent<HTMLElement>) => {
@@ -50,7 +50,7 @@ const NavBar: React.FC = () => {
             clickHandler={clickHandler}
             links={links}
           />
-          <ToggleTheme theme={wordState.theme} />
+          <ToggleTheme theme={appState.theme} />
         </Toolbar>
       </Container>
     </AppBar>

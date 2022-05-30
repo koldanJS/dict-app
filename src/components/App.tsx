@@ -20,7 +20,7 @@ const ligthTheme = createTheme({
 
 const App: React.FC = () => {
 
-  const theme = useTypedSelector(state => state.wordState.theme)
+  const theme = useTypedSelector(state => state.appState.theme)
 
   return (
     <ThemeProvider theme={(theme === 'Light') ? ligthTheme : darkTheme}>

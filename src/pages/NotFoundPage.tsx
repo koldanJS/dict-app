@@ -7,7 +7,7 @@ import { images } from '../img/images'
 
 const NotFoundPage: React.FC = () => {
 
-  const error = useTypedSelector(state => state.wordState.error)
+  const error = useTypedSelector(state => state.appState.error)
   const navigate = useNavigate()
 
   const clickHandler = () => {

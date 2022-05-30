@@ -6,17 +6,17 @@ import Loader from '../components/Loader'
 
 const ResultPage: React.FC = () => {
 
-  const wordState = useTypedSelector(state => state.wordState)
+  const appState = useTypedSelector(state => state.appState)
 
   return (
     <>
       <Search />
       {
-        wordState.word
-          ? <WordDetails word={wordState.word} wordDetails={wordState.wordDetails} />
+        appState.word
+          ? <WordDetails word={appState.word} wordDetails={appState.wordDetails} />
           : null
       }
-      <Loader loading={wordState.loading} />
+      <Loader loading={appState.loading} />
     </>
   )
 }

@@ -1,6 +1,6 @@
-import { WordAction, WordActionTypes, WordState } from '../types/wordTypes'
+import { WordAction, WordActionTypes, AppState } from '../types/wordTypes'
 
-const initialState: WordState = {
+const initialState: AppState = {
   wordDetails: [],
   word: '',
   loading: false,
@@ -8,7 +8,7 @@ const initialState: WordState = {
   theme: 'Light'
 }
 
-export const wordReducer = (state = initialState, action: WordAction): WordState => {
+export const wordReducer = (state = initialState, action: WordAction): AppState => {
   switch (action.type) {
   case WordActionTypes.FETCH_WORD: return {
     ...state,

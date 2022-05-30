@@ -40,7 +40,7 @@ export interface ErrorState {
   status: number
 }
 
-export interface WordState {
+export interface AppState {
   wordDetails: WordDetails[]
   word: string
   loading: boolean
