@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import { useTypedSelector } from '../hooks/useTypedSelector'
 import Search from '../components/Search'
 import Logo from '../components/Logo'
+import Loader from '../components/Loader'
 
 const HomePage: React.FC = () => {
 
@@ -13,19 +14,7 @@ const HomePage: React.FC = () => {
     <>
       <Logo theme={wordState.theme} />
       <Search />
-      {
-        wordState.loading
-          ? <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              mt: 3
-            }}
-          >
-            <CircularProgress />
-          </Box>
-          : null
-      }
+      <Loader loading={wordState.loading} />
     </>
   )
 }
