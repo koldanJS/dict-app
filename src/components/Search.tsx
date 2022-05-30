@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux'
 import { Container, TextField } from '@mui/material'
 import { WordAction } from '../redux/types/wordTypes'
 import { fetchWord } from '../redux/actions/wordAction'
-import Alert from './Alert'
 import './Search.scss'
 
 const Search: React.FC = () => {
@@ -57,22 +56,19 @@ const Search: React.FC = () => {
     <Container>
       <TextField
         className="search-field"
+        error={isAlert}
         disabled={disabled}
         fullWidth
         autoFocus={true}
         type="text"
-        label="Enter a word and press 'Enter' to see more..."
-        variant="filled"
         value={word}
         placeholder="Enter a word..."
+        label={isAlert ? 'Alert' : 'Enter a word and press "Enter" to see more...'}
+        helperText={isAlert ? 'Looks like you didn\'t enter anything...' : ''}
+        variant="filled"
         onKeyDown={keyDownHandler}
         onChange={changeHandler}
       />
-      {
-        isAlert
-          ? <Alert message="Looks like you didn\'t enter anything..." />
-          : null
-      }
     </Container>
   )
 }
