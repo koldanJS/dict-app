@@ -2,7 +2,7 @@
 
 .definitions-box {
   display: flex;
-  min-height: 150px;
+  min-height: 100px;
 
   @media (max-width: $screen-width-min) {
     display: block;
@@ -10,7 +10,6 @@
   }
 
   .definitions-tabs {
-    min-height: 30px;
     max-height: 250px;
     border-right: 1px;
     border-color: #BEBEBE;
