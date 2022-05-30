@@ -10,7 +10,8 @@
   }
 
   .definitions-tabs {
-    height: 250px;
+    min-height: 30px;
+    max-height: 250px;
     border-right: 1px;
     border-color: #BEBEBE;
     overflow: visible;
@@ -29,7 +30,6 @@
 
       @media (max-width: $screen-width-mid) {
         font-size: $size9;
-        width: 100%;
         padding: $pad6;
       }
       @media (max-width: $screen-width-min) {
