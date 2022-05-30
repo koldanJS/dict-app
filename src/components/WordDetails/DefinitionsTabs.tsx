@@ -72,7 +72,7 @@ const DefinitionsTabs: React.FC<IDefinitionsTabsProps> = (props) => {
   return (
     <Box sx={{...styles.box}}>
       <Tabs
-        orientation="horizontal"
+        orientation={(window.innerWidth > 600) ? 'vertical' : 'horizontal'}
         variant="scrollable"
         value={value}
         onChange={handleChange}
