@@ -29,16 +29,18 @@ const WordPhonetics: React.FC<IWordPhoneticsProps> = (props) => {
       variant="outlined"
       component="ul"
     >
-      {phonetics?.map((phoneticItem, index) => {
-        return (
-          <ListItem key={index}>
-            <PhoneticButton
-              text={phoneticItem.text?.toLowerCase()}
-              audio={phoneticItem.audio}
-            />
-          </ListItem>
-        )
-      })}
+      {
+        phonetics?.map((phoneticItem, index) => {
+          return (
+            <ListItem key={index}>
+              <PhoneticButton
+                text={phoneticItem.text?.toLowerCase()}
+                audio={phoneticItem.audio}
+              />
+            </ListItem>
+          )
+        })
+      }
     </Paper>
   )
 }

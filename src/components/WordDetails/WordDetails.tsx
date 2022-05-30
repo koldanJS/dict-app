@@ -40,9 +40,13 @@ const WordDetailsComponent: React.FC<IWordDetailsProps> = (props) => {
         word={word}
         defaultPhonetic={transformPhoneticString(defaultPhonetic)}
       />
-      <WordPhonetics
-        phonetics={wordDetails[page - 1]?.phonetics}
-      />
+      {
+        wordDetails[page - 1].phonetics?.length
+          ? <WordPhonetics
+            phonetics={wordDetails[page - 1]?.phonetics}
+          />
+          : null
+      }
       <WordMeanings
         meanings={wordDetails[page - 1]?.meanings}
       />
